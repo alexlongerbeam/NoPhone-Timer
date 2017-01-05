@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DA1808E1E1E343C00A55E2C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA1808D1E1E343C00A55E2C /* CoreLocation.framework */; };
+		1DEC4C4D1E1E1FAA00BF119B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DEC4C4C1E1E1FAA00BF119B /* AdSupport.framework */; };
+		1DEC4C511E1E200500BF119B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DEC4C501E1E200500BF119B /* AVFoundation.framework */; };
+		1DEC4C5F1E1E208F00BF119B /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DEC4C5E1E1E208F00BF119B /* MediaPlayer.framework */; };
+		1DEC4C631E1E20A300BF119B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DEC4C621E1E20A300BF119B /* StoreKit.framework */; };
+		1DEC4C651E1E20AE00BF119B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DEC4C641E1E20AE00BF119B /* SystemConfiguration.framework */; };
+		1DF16DCA1E1E391D00098682 /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF16DC91E1E391D00098682 /* RevMobAds.framework */; };
 		D11C4F931E11DA4400428D6A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11C4F921E11DA4400428D6A /* DataService.swift */; };
 		D15C274C1DFF8EC4008A6BEC /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15C274A1DFF8EC4008A6BEC /* PickerView.swift */; };
 		D15C274D1DFF8EC4008A6BEC /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15C274B1DFF8EC4008A6BEC /* TimerView.swift */; };
@@ -26,6 +33,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DA1808D1E1E343C00A55E2C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1DA180951E1E374100A55E2C /* NoPhone Timer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NoPhone Timer-Bridging-Header.h"; sourceTree = "<group>"; };
+		1DEC4C4C1E1E1FAA00BF119B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		1DEC4C501E1E200500BF119B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1DEC4C5E1E1E208F00BF119B /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		1DEC4C621E1E20A300BF119B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		1DEC4C641E1E20AE00BF119B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1DF16DC91E1E391D00098682 /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevMobAds.framework; sourceTree = "<group>"; };
 		D11C4F921E11DA4400428D6A /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		D15C274A1DFF8EC4008A6BEC /* PickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		D15C274B1DFF8EC4008A6BEC /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
@@ -51,6 +66,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DF16DCA1E1E391D00098682 /* RevMobAds.framework in Frameworks */,
+				1DA1808E1E1E343C00A55E2C /* CoreLocation.framework in Frameworks */,
+				1DEC4C651E1E20AE00BF119B /* SystemConfiguration.framework in Frameworks */,
+				1DEC4C631E1E20A300BF119B /* StoreKit.framework in Frameworks */,
+				1DEC4C5F1E1E208F00BF119B /* MediaPlayer.framework in Frameworks */,
+				1DEC4C511E1E200500BF119B /* AVFoundation.framework in Frameworks */,
+				1DEC4C4D1E1E1FAA00BF119B /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,11 +112,26 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
+		1DEC4BE41E1E183800BF119B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF16DC91E1E391D00098682 /* RevMobAds.framework */,
+				1DA1808D1E1E343C00A55E2C /* CoreLocation.framework */,
+				1DEC4C641E1E20AE00BF119B /* SystemConfiguration.framework */,
+				1DEC4C621E1E20A300BF119B /* StoreKit.framework */,
+				1DEC4C5E1E1E208F00BF119B /* MediaPlayer.framework */,
+				1DEC4C501E1E200500BF119B /* AVFoundation.framework */,
+				1DEC4C4C1E1E1FAA00BF119B /* AdSupport.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FA54A7751D5F838C0060FAE4 = {
 			isa = PBXGroup;
 			children = (
 				FA54A7801D5F838D0060FAE4 /* NoPhone Timer */,
 				FA54A77F1D5F838D0060FAE4 /* Products */,
+				1DEC4BE41E1E183800BF119B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +154,7 @@
 				FA54A7881D5F838E0060FAE4 /* Assets.xcassets */,
 				FA54A78A1D5F838E0060FAE4 /* LaunchScreen.storyboard */,
 				FA54A78D1D5F838E0060FAE4 /* Info.plist */,
+				1DA180951E1E374100A55E2C /* NoPhone Timer-Bridging-Header.h */,
 			);
 			path = "NoPhone Timer";
 			sourceTree = "<group>";
@@ -154,7 +192,7 @@
 					FA54A77D1D5F838D0060FAE4 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = G6GJ6E3559;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -324,12 +362,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = G6GJ6E3559;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VungleSDK.embeddedframework",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "NoPhone Timer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.NoPhone-Timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NoPhone Timer/NoPhone Timer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -338,12 +386,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = G6GJ6E3559;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VungleSDK.embeddedframework",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "NoPhone Timer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.NoPhone-Timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NoPhone Timer/NoPhone Timer-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
