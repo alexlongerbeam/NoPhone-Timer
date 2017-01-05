@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeView" customModule="NoPhone_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtT-oF-6BW">
+                                <rect key="frame" x="16" y="601" width="343" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qtT-oF-6BW" secondAttribute="height" multiplier="343:46" id="dWR-wy-brr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="26"/>
+                                <state key="normal" title="Custom" backgroundImage="square">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="customButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZVL-T0-8fZ"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dDY-5g-pYf" userLabel="Button Stacks">
+                                <rect key="frame" x="26" y="300" width="323" height="283"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="WAA-XV-JcV">
+                                        <rect key="frame" x="0.0" y="0.0" width="323" height="134"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvY-n5-yjY">
+                                                <rect key="frame" x="0.0" y="0.0" width="146.5" height="134"/>
+                                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="26"/>
+                                                <state key="normal" title="15 Min" backgroundImage="circle">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="button15:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yuC-Ym-o5s"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZjD-4P-mNP" userLabel="30 Min">
+                                                <rect key="frame" x="176.5" y="0.0" width="146.5" height="134"/>
+                                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="26"/>
+                                                <state key="normal" title="30 Min" backgroundImage="circle">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="button30:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wwy-lD-xAl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="9El-DX-GIK">
+                                        <rect key="frame" x="0.0" y="149" width="323" height="134"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVh-Yf-HLp" userLabel="45 Min">
+                                                <rect key="frame" x="0.0" y="0.0" width="146.5" height="134"/>
+                                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="26"/>
+                                                <state key="normal" title="45 Min" backgroundImage="circle">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="button45:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hdr-Un-2sf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tr-yF-zkD">
+                                                <rect key="frame" x="176.5" y="0.0" width="146.5" height="134"/>
+                                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="26"/>
+                                                <state key="normal" title="1 Hour" backgroundImage="circle">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="hourButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nYR-Gu-1dj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dDY-5g-pYf" secondAttribute="height" multiplier="323:283" id="rDo-m5-ry3"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCI-2P-wHO">
+                                <rect key="frame" x="69.5" y="233" width="236" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="JUJ-O0-Gtd"/>
+                                    <constraint firstAttribute="width" constant="236" id="Jcp-Nf-J6S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="17"/>
+                                <state key="normal" title="Get More Cancels" backgroundImage="square">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addEmergency:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rcU-Eh-OlW"/>
+                                </connections>
+                            </button>
+                            <stackView contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="er8-ff-68Y" userLabel="Top Stack">
+                                <rect key="frame" x="0.0" y="40" width="375" height="188"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NoPhone Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGV-eL-tDh">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="62.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="36"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total NoPhone time spent                                3 hours and 42 minutes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhA-Eq-Ycx" userLabel="Total Label                             3 hours and 42 minutes">
+                                        <rect key="frame" x="0.0" y="62.5" width="375" height="63"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have 2 Cancels" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdM-5s-lQj">
+                                        <rect key="frame" x="0.0" y="125.5" width="375" height="62.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="OdM-5s-lQj" firstAttribute="top" secondItem="vhA-Eq-Ycx" secondAttribute="bottom" id="0PX-u4-7q6"/>
+                                    <constraint firstItem="vhA-Eq-Ycx" firstAttribute="centerX" secondItem="er8-ff-68Y" secondAttribute="centerX" id="R9z-Hn-SEf"/>
+                                    <constraint firstItem="OdM-5s-lQj" firstAttribute="centerX" secondItem="er8-ff-68Y" secondAttribute="centerX" id="Vzf-9f-lnV"/>
+                                    <constraint firstItem="IGV-eL-tDh" firstAttribute="centerX" secondItem="er8-ff-68Y" secondAttribute="centerX" id="Yls-mR-Jq9"/>
+                                </constraints>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="Guz-gf-Lek" userLabel="Help Image">
+                                <rect key="frame" x="334" y="25" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="Gjh-gh-mXB"/>
+                                    <constraint firstAttribute="height" constant="25" id="cOf-aD-UEs"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twf-VX-UBw" userLabel="Help Label">
+                                <rect key="frame" x="333.5" y="26" width="25" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZJ-nX-rGs" userLabel="Help Button">
+                                <rect key="frame" x="333.5" y="25.5" width="25" height="25"/>
+                                <connections>
+                                    <action selector="helpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0C8-Oi-huy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.03323327478367262" blue="0.4391974803664922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="er8-ff-68Y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1ZG-fn-5GS"/>
+                            <constraint firstItem="Twf-VX-UBw" firstAttribute="centerX" secondItem="jZJ-nX-rGs" secondAttribute="centerX" id="3oo-iL-bwC"/>
+                            <constraint firstItem="Guz-gf-Lek" firstAttribute="width" secondItem="jZJ-nX-rGs" secondAttribute="width" id="3tL-bu-wkj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qtT-oF-6BW" secondAttribute="bottom" constant="20" id="4va-wK-OxE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dDY-5g-pYf" secondAttribute="trailing" constant="10" id="6Fv-0Q-jrA"/>
+                            <constraint firstItem="Guz-gf-Lek" firstAttribute="centerX" secondItem="jZJ-nX-rGs" secondAttribute="centerX" id="6ej-Xr-FFG"/>
+                            <constraint firstItem="dDY-5g-pYf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="9HG-3K-TFm"/>
+                            <constraint firstItem="qtT-oF-6BW" firstAttribute="top" secondItem="dDY-5g-pYf" secondAttribute="bottom" constant="18" id="CqR-t7-fve"/>
+                            <constraint firstItem="Guz-gf-Lek" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="25" id="Cyb-z0-df3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qtT-oF-6BW" secondAttribute="trailing" id="Jg9-qY-BGh"/>
+                            <constraint firstItem="Twf-VX-UBw" firstAttribute="centerY" secondItem="jZJ-nX-rGs" secondAttribute="centerY" id="KTQ-Vv-Gbz"/>
+                            <constraint firstItem="uCI-2P-wHO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OvM-9c-x1R"/>
+                            <constraint firstItem="uCI-2P-wHO" firstAttribute="top" secondItem="er8-ff-68Y" secondAttribute="bottom" constant="5" id="Vl7-Sw-cdz"/>
+                            <constraint firstItem="er8-ff-68Y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Y3m-6X-aIf"/>
+                            <constraint firstItem="dDY-5g-pYf" firstAttribute="top" secondItem="uCI-2P-wHO" secondAttribute="bottom" constant="20" id="cmh-Sz-2eW"/>
+                            <constraint firstAttribute="trailing" secondItem="er8-ff-68Y" secondAttribute="trailing" id="f2i-vI-PjH"/>
+                            <constraint firstItem="Twf-VX-UBw" firstAttribute="height" secondItem="jZJ-nX-rGs" secondAttribute="height" id="g1R-JK-wFC"/>
+                            <constraint firstItem="Twf-VX-UBw" firstAttribute="width" secondItem="jZJ-nX-rGs" secondAttribute="width" id="mRL-qi-QUJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Guz-gf-Lek" secondAttribute="trailing" id="ode-L9-nKR"/>
+                            <constraint firstItem="Guz-gf-Lek" firstAttribute="height" secondItem="jZJ-nX-rGs" secondAttribute="height" id="piQ-Ug-SYu"/>
+                            <constraint firstItem="qtT-oF-6BW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rCa-5X-x2E"/>
+                            <constraint firstItem="Guz-gf-Lek" firstAttribute="centerY" secondItem="jZJ-nX-rGs" secondAttribute="centerY" id="wwT-YT-vd5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button15" destination="uvY-n5-yjY" id="7rH-8m-Jjz"/>
+                        <outlet property="button30" destination="ZjD-4P-mNP" id="szu-T8-Z1t"/>
+                        <outlet property="button45" destination="IVh-Yf-HLp" id="uly-uE-qLC"/>
+                        <outlet property="customButton" destination="qtT-oF-6BW" id="6yu-jP-UJC"/>
+                        <outlet property="emerButton" destination="uCI-2P-wHO" id="FHF-D0-e2G"/>
+                        <outlet property="emerLabel" destination="OdM-5s-lQj" id="5ZW-6Y-Q2X"/>
+                        <outlet property="helpButton" destination="jZJ-nX-rGs" id="MCm-n5-Ofa"/>
+                        <outlet property="helpImage" destination="Guz-gf-Lek" id="vHB-CG-L3Q"/>
+                        <outlet property="helpLabel" destination="Twf-VX-UBw" id="4ol-Il-RoR"/>
+                        <outlet property="hourButton" destination="6tr-yF-zkD" id="r2q-N5-YbR"/>
+                        <outlet property="timerButton" destination="di1-YY-fWB" id="WHf-HG-mh3"/>
+                        <outlet property="timerLabel" destination="kip-DH-gg8" id="Phy-A5-npK"/>
+                        <outlet property="totalLabel" destination="vhA-Eq-Ycx" id="MWe-Jf-s3A"/>
+                        <segue destination="r3P-mm-tLk" kind="show" identifier="picker" id="PM9-EH-Uzf"/>
+                        <segue destination="SVF-Bn-emc" kind="custom" identifier="middle" customClass="TimerSegue" customModule="NoPhone_Timer" customModuleProvider="target" id="s45-to-nXc"/>
+                        <segue destination="rcm-xm-fM3" kind="custom" identifier="help" customClass="RightSegue" customModule="NoPhone_Timer" customModuleProvider="target" id="y1F-jj-fQr"/>
+                        <segue destination="l45-L2-mvc" kind="custom" identifier="straightToTimer" customClass="TimerSegue" customModule="NoPhone_Timer" customModuleProvider="target" id="Sq1-EV-rsF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1461.5999999999999" y="157.87106446776613"/>
+        </scene>
+        <!--Picker View-->
+        <scene sceneID="KyU-zx-7oI">
+            <objects>
+                <viewController id="r3P-mm-tLk" customClass="PickerView" customModule="NoPhone_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UgW-XC-RKU"/>
+                        <viewControllerLayoutGuide type="bottom" id="Omg-8a-6He"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LN8-RX-7L7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0KN-YG-mvW">
+                                <rect key="frame" x="16" y="28" width="48" height="30"/>
+                                <state key="normal" title="&lt; Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uqw-Qk-5IK"/>
+                                    <action selector="backButton:" destination="r3P-mm-tLk" eventType="touchUpInside" id="4od-eK-0Hd"/>
+                                    <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hgL-gH-nes"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pZF-NW-neY" userLabel="selector">
+                                <rect key="frame" x="27.5" y="225.5" width="320" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="qRH-qo-VXr"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4I-GO-Grt">
+                                <rect key="frame" x="125.5" y="490" width="124" height="42"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="Start Timer">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goButton:" destination="r3P-mm-tLk" eventType="touchUpInside" id="ByI-ij-D6N"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.033233274780000002" blue="0.43919748040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pZF-NW-neY" firstAttribute="centerX" secondItem="LN8-RX-7L7" secondAttribute="centerX" id="6WW-sv-twB"/>
+                            <constraint firstItem="V4I-GO-Grt" firstAttribute="centerX" secondItem="LN8-RX-7L7" secondAttribute="centerX" id="BxV-tu-7Uw"/>
+                            <constraint firstItem="pZF-NW-neY" firstAttribute="centerY" secondItem="LN8-RX-7L7" secondAttribute="centerY" id="XWl-vD-HUT"/>
+                            <constraint firstItem="Omg-8a-6He" firstAttribute="top" secondItem="V4I-GO-Grt" secondAttribute="bottom" constant="135" id="bst-Ir-tgi"/>
+                            <constraint firstItem="0KN-YG-mvW" firstAttribute="leading" secondItem="LN8-RX-7L7" secondAttribute="leadingMargin" id="d7I-4b-n0b"/>
+                            <constraint firstItem="0KN-YG-mvW" firstAttribute="top" secondItem="UgW-XC-RKU" secondAttribute="bottom" constant="8" id="pmc-Lq-JbK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="0KN-YG-mvW" id="LOE-og-usk"/>
+                        <outlet property="goButton" destination="V4I-GO-Grt" id="jOK-HF-CMd"/>
+                        <outlet property="timerSelector" destination="pZF-NW-neY" id="rYZ-ne-id1"/>
+                        <segue destination="SVF-Bn-emc" kind="custom" identifier="pickerTimer" customClass="TimerSegue" customModule="NoPhone_Timer" customModuleProvider="target" id="Jhv-bX-Uhg"/>
+                        <segue destination="l45-L2-mvc" kind="custom" identifier="pickerStraightTimer" customClass="TimerSegue" customModule="NoPhone_Timer" customModuleProvider="target" id="5mk-3I-tDw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pVG-hx-dY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1460" y="1075"/>
+        </scene>
+        <!--Timer View-->
+        <scene sceneID="j9j-Zi-43s">
+            <objects>
+                <viewController id="l45-L2-mvc" customClass="TimerView" customModule="NoPhone_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vZF-7r-SVM"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Zr-LK-0oU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3OQ-hx-z5v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="di1-YY-fWB" userLabel="Timer Button">
+                                <rect key="frame" x="88" y="284" width="200" height="100"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Pac-XQ-qx8"/>
+                                    <constraint firstAttribute="height" constant="100" id="VHk-ch-pdU"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="timerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1PF-dy-c8G"/>
+                                    <action selector="timerButton:" destination="l45-L2-mvc" eventType="touchDown" id="5ml-Pg-W61"/>
+                                    <outletCollection property="gestureRecognizers" destination="rth-N5-2rE" appends="YES" id="0Nc-Wu-sOh"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press and hold to stop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqT-lw-QDe">
+                                <rect key="frame" x="102" y="113" width="171" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kip-DH-gg8">
+                                <rect key="frame" x="88" y="284" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="gbx-GC-Fl9"/>
+                                    <constraint firstAttribute="height" constant="100" id="jko-td-V4T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g4H-ph-5QU">
+                                <rect key="frame" x="85" y="514" width="2" height="33"/>
+                                <color key="backgroundColor" red="1" green="0.033681671420000003" blue="0.060308711690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="HK3-6Z-K6U"/>
+                                </constraints>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Canceling..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eiy-gW-cjP">
+                                <rect key="frame" x="66" y="392" width="244" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="RVN-2W-cw2"/>
+                                    <constraint firstAttribute="width" constant="244" id="z3u-UI-oqn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                <color key="textColor" red="1" green="0.033681671420000003" blue="0.060308711690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view hidden="YES" alpha="0.96999999999999997" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOr-Wa-i1f" userLabel="AirplaneAlert">
+                                <rect key="frame" x="53" y="254" width="270" height="160"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone Removed from           Airplane Mode" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fln-Zj-4Gd">
+                                        <rect key="frame" x="8" y="8" width="254" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akB-av-auR">
+                                        <rect key="frame" x="8" y="113" width="254" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Cancel Timer">
+                                            <color key="titleColor" red="1" green="0.033681671420000003" blue="0.060308711690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="airplaneCancel:" destination="l45-L2-mvc" eventType="touchUpInside" id="T6q-2U-MaK"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have been deducted a Cancel. Return Phone to Airplane Mode                 to Continue OR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rB6-tF-1pi">
+                                        <rect key="frame" x="8" y="52" width="254" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="T1i-nm-Kmw"/>
+                                    <constraint firstAttribute="height" constant="160" id="krK-B0-fKK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.033233274780000002" blue="0.43919748040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kip-DH-gg8" firstAttribute="centerX" secondItem="3OQ-hx-z5v" secondAttribute="centerX" id="9vX-PY-3ty"/>
+                            <constraint firstItem="kip-DH-gg8" firstAttribute="centerY" secondItem="3OQ-hx-z5v" secondAttribute="centerY" id="Hax-Hy-8bg"/>
+                            <constraint firstItem="Eiy-gW-cjP" firstAttribute="top" secondItem="kip-DH-gg8" secondAttribute="bottom" constant="8" id="WUn-ZB-Qwu"/>
+                            <constraint firstItem="JqT-lw-QDe" firstAttribute="centerX" secondItem="3OQ-hx-z5v" secondAttribute="centerX" id="cyH-UE-MRX"/>
+                            <constraint firstItem="di1-YY-fWB" firstAttribute="centerY" secondItem="3OQ-hx-z5v" secondAttribute="centerY" id="eeA-dK-v7v"/>
+                            <constraint firstItem="g4H-ph-5QU" firstAttribute="leading" secondItem="Eiy-gW-cjP" secondAttribute="leading" id="mhD-zR-SYp"/>
+                            <constraint firstItem="gOr-Wa-i1f" firstAttribute="centerY" secondItem="3OQ-hx-z5v" secondAttribute="centerY" id="nCZ-wL-0fT"/>
+                            <constraint firstItem="g4H-ph-5QU" firstAttribute="top" secondItem="Eiy-gW-cjP" secondAttribute="bottom" constant="45" id="qm0-4M-R4h"/>
+                            <constraint firstItem="JqT-lw-QDe" firstAttribute="top" secondItem="vZF-7r-SVM" secondAttribute="bottom" constant="93" id="suj-mN-5Br"/>
+                            <constraint firstItem="Eiy-gW-cjP" firstAttribute="centerX" secondItem="3OQ-hx-z5v" secondAttribute="centerX" id="sz4-eZ-TQR"/>
+                            <constraint firstItem="gOr-Wa-i1f" firstAttribute="centerX" secondItem="3OQ-hx-z5v" secondAttribute="centerX" id="uqv-US-H5s"/>
+                            <constraint firstItem="di1-YY-fWB" firstAttribute="centerX" secondItem="3OQ-hx-z5v" secondAttribute="centerX" id="x9g-IK-Mp1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mZK-Cc-qhg"/>
+                    <connections>
+                        <outlet property="AirplaneAlert" destination="gOr-Wa-i1f" id="0cT-3a-fwE"/>
+                        <outlet property="airplaneCancel" destination="akB-av-auR" id="wWR-YG-Gxf"/>
+                        <outlet property="bar" destination="g4H-ph-5QU" id="QtX-CO-Pt5"/>
+                        <outlet property="cancelLabel" destination="Eiy-gW-cjP" id="G4N-2i-ueU"/>
+                        <outlet property="longPress" destination="rth-N5-2rE" id="0Ad-nE-yWP"/>
+                        <outlet property="pressMessage" destination="JqT-lw-QDe" id="EYT-Je-kuu"/>
+                        <outlet property="timerButton" destination="di1-YY-fWB" id="5Ga-Ro-t4l"/>
+                        <outlet property="timerLabel" destination="kip-DH-gg8" id="ohd-G5-hCd"/>
+                        <segue destination="BYZ-38-t0r" kind="custom" identifier="homeScreen" customClass="HomeSegue" customModule="NoPhone_Timer" customModuleProvider="target" id="bDj-M9-GVK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ICa-mS-w4W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.29999999999999999" id="rth-N5-2rE">
+                    <connections>
+                        <action selector="longPress:" destination="l45-L2-mvc" id="G08-zc-6lX"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1218" y="1075"/>
+        </scene>
+        <!--Help View-->
+        <scene sceneID="AHO-f4-wu0">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="rcm-xm-fM3" customClass="HelpView" customModule="NoPhone_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8qN-Tx-Om7"/>
+                        <viewControllerLayoutGuide type="bottom" id="E6o-lt-jP7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gvR-yM-ETh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quc-sX-brR">
+                                <rect key="frame" x="0.0" y="95" width="375" height="572"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="79L-y1-aol" userLabel="Container View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="939"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7AQ-0J-7uO">
+                                                <rect key="frame" x="16" y="0.0" width="343" height="900"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="900" id="fZb-6Z-xQT"/>
+                                                </constraints>
+                                                <mutableString key="text">This app is designed to help yourself stay off your phone when you need to concentrate, get something done, or just spend some time away from a screen.
+
+- To begin, select an amount of time for the timer to be set, either by selecting one of the default time buttons, or choosing a custom amount of time. 
+
+- The app will prompt you to put your phone into airplane mode to begin, as this is the only way to endure no outside distractions tempt you while you are trying to stay off of your phone.  
+
+- If you leave the app, repeat notifications will remind you to return to the app
+
+- Press and hold on the timer to cancel early if needed
+
+Cancels
+
+- Every user has 3 “Cancels” when they first open the app.   
+
+- Cancels allow the user to start a timer, and are deducted when the user does something they are not supposed to
+
+- Cancels are deducted when the user leaves the app while a timer is running, takes the phone out of airplane mode while the timer is running, or cancels the timer early
+
+- A user will not be able to start a timer unless they have at least one Cancel
+
+- To acquire more Cancels, tap the “Get More Cancels” button on the home screen and watch an advertisement
+</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="939" id="Olp-Oa-SiH"/>
+                                            <constraint firstItem="7AQ-0J-7uO" firstAttribute="top" secondItem="79L-y1-aol" secondAttribute="top" id="gFO-we-qSw"/>
+                                            <constraint firstItem="7AQ-0J-7uO" firstAttribute="leading" secondItem="79L-y1-aol" secondAttribute="leading" constant="16" id="gOb-GD-8wV"/>
+                                            <constraint firstAttribute="trailing" secondItem="7AQ-0J-7uO" secondAttribute="trailing" constant="16" id="ues-df-Vlh"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="79L-y1-aol" secondAttribute="trailing" id="2WM-jb-vCI"/>
+                                    <constraint firstAttribute="bottom" secondItem="79L-y1-aol" secondAttribute="bottom" id="Igo-V8-asw"/>
+                                    <constraint firstItem="79L-y1-aol" firstAttribute="leading" secondItem="quc-sX-brR" secondAttribute="leading" id="JE5-IG-yPV"/>
+                                    <constraint firstItem="79L-y1-aol" firstAttribute="top" secondItem="quc-sX-brR" secondAttribute="top" id="nkL-CE-7Pe"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isw-Pz-dop">
+                                <rect key="frame" x="16" y="28" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="UMY-QD-rvR"/>
+                                </constraints>
+                                <state key="normal" title="&lt; Back">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="127-U7-45t"/>
+                                    <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EMm-al-aiX"/>
+                                    <action selector="backButton:" destination="r3P-mm-tLk" eventType="touchUpInside" id="GTi-h3-yDh"/>
+                                    <action selector="backButton:" destination="rcm-xm-fM3" eventType="touchUpInside" id="tc1-3c-Ffd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How it Works" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J73-ZP-Iq3">
+                                <rect key="frame" x="96.5" y="52" width="182" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="4qM-CO-Y9R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7AQ-0J-7uO" firstAttribute="leading" secondItem="isw-Pz-dop" secondAttribute="leading" id="11b-bR-Ppo"/>
+                            <constraint firstItem="isw-Pz-dop" firstAttribute="top" secondItem="8qN-Tx-Om7" secondAttribute="bottom" constant="8" symbolic="YES" id="7gx-hG-u5L"/>
+                            <constraint firstItem="quc-sX-brR" firstAttribute="top" secondItem="J73-ZP-Iq3" secondAttribute="bottom" constant="8" id="Lyg-2b-drw"/>
+                            <constraint firstItem="quc-sX-brR" firstAttribute="bottom" secondItem="E6o-lt-jP7" secondAttribute="top" id="NOy-lC-bBH"/>
+                            <constraint firstItem="J73-ZP-Iq3" firstAttribute="top" secondItem="8qN-Tx-Om7" secondAttribute="bottom" constant="32" id="Noz-mz-2RP"/>
+                            <constraint firstItem="J73-ZP-Iq3" firstAttribute="centerX" secondItem="quc-sX-brR" secondAttribute="centerX" id="Wlg-3R-qwT"/>
+                            <constraint firstItem="quc-sX-brR" firstAttribute="leading" secondItem="gvR-yM-ETh" secondAttribute="leading" id="cqf-im-clg"/>
+                            <constraint firstAttribute="trailing" secondItem="quc-sX-brR" secondAttribute="trailing" id="ezq-C8-jN2"/>
+                            <constraint firstItem="79L-y1-aol" firstAttribute="width" secondItem="gvR-yM-ETh" secondAttribute="width" id="qbD-od-NeR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="back" destination="isw-Pz-dop" id="VI0-JJ-X6K"/>
+                        <outlet property="helpText" destination="7AQ-0J-7uO" id="82E-li-Wir"/>
+                        <outlet property="scrollView" destination="quc-sX-brR" id="WG9-yH-ayr"/>
+                        <segue destination="BYZ-38-t0r" kind="custom" identifier="leftBack" customClass="LeftSegue" customModule="NoPhone_Timer" customModuleProvider="target" id="JEm-EO-Llr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="boT-Nv-SaI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-313.125" y="157.3943661971831"/>
+        </scene>
+        <!--Middle View-->
+        <scene sceneID="5hs-Rv-LQU">
+            <objects>
+                <viewController id="SVF-Bn-emc" customClass="MiddleView" customModule="NoPhone_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MO8-e3-0F6"/>
+                        <viewControllerLayoutGuide type="bottom" id="khs-It-egk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QSp-5y-Lqp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Put Device                          in Airplane Mode" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEa-HX-DoS">
+                                <rect key="frame" x="37.5" y="115" width="300" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="viw-tO-BOv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="29"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaE-mW-2vM">
+                                <rect key="frame" x="145" y="463" width="85" height="37"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="contButton:" destination="SVF-Bn-emc" eventType="touchUpInside" id="Lhn-TN-4ql"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9A4-SO-tYu">
+                                <rect key="frame" x="16" y="20" width="48" height="30"/>
+                                <state key="normal" title="&lt; Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="back:" destination="SVF-Bn-emc" eventType="touchUpInside" id="BlE-ql-eFM"/>
+                                    <action selector="backButon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JFq-Vh-qKf"/>
+                                    <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M1J-iu-Fqd"/>
+                                    <action selector="backButton:" destination="r3P-mm-tLk" eventType="touchUpInside" id="xa9-sy-ebI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.033233274780000002" blue="0.43919748040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9A4-SO-tYu" firstAttribute="leading" secondItem="QSp-5y-Lqp" secondAttribute="leadingMargin" id="Ix4-DI-FvK"/>
+                            <constraint firstItem="9A4-SO-tYu" firstAttribute="top" secondItem="MO8-e3-0F6" secondAttribute="bottom" id="lVK-Cs-bpx"/>
+                            <constraint firstItem="khs-It-egk" firstAttribute="top" secondItem="SaE-mW-2vM" secondAttribute="bottom" constant="167" id="uyr-Bg-KhX"/>
+                            <constraint firstItem="SaE-mW-2vM" firstAttribute="centerX" secondItem="QSp-5y-Lqp" secondAttribute="centerX" id="vCy-iP-wKR"/>
+                            <constraint firstItem="MEa-HX-DoS" firstAttribute="centerX" secondItem="QSp-5y-Lqp" secondAttribute="centerX" id="vsQ-4O-4KL"/>
+                            <constraint firstItem="MEa-HX-DoS" firstAttribute="top" secondItem="MO8-e3-0F6" secondAttribute="bottom" constant="95" id="zkY-8G-2AK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="9A4-SO-tYu" id="M2E-hS-KMp"/>
+                        <outlet property="contButton" destination="SaE-mW-2vM" id="Cwx-EI-eqB"/>
+                        <segue destination="l45-L2-mvc" kind="custom" identifier="timer" customClass="TimerSegue" customModule="NoPhone_Timer" customModuleProvider="target" id="4zf-xh-67c"/>
+                        <segue destination="BYZ-38-t0r" kind="custom" identifier="backHome" customClass="HomeSegue" customModule="NoPhone_Timer" customModuleProvider="target" id="mNQ-pr-lAq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BVg-9J-cAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-311" y="1224"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="circle" width="2000" height="2000"/>
+        <image name="square" width="600" height="600"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="JEm-EO-Llr"/>
+        <segue reference="Jhv-bX-Uhg"/>
+        <segue reference="4zf-xh-67c"/>
+    </inferredMetricsTieBreakers>
+</document>
