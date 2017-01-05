@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeView: UIViewController {
+class HomeView: UIViewController, RevMobAdsDelegate{
     
     //Labels
     @IBOutlet weak var emerLabel: UILabel!
@@ -33,12 +33,22 @@ class HomeView: UIViewController {
     var minutes: Int = 0
     var completed:Bool = false
     var completedTime:String = ""
+    var rewardedVideo: RevMobFullscreen?
+    var fullscreen: RevMobFullscreen?
+    
+    
     
     //*****Button actions*****
     //************************
     @IBAction func addEmergency(_ sender: Any) {
-        DataService.instance.addOne()
-        emerLabel.text = DataService.instance.text()
+        if rewardedVideo==nil{
+            adNotLoaded()
+            initializeAd()
+        }
+        else{
+            showLoadedRewardedVideo()
+            loadRewardedVideo()
+        }
     }
     
     @IBAction func button15(_ sender: AnyObject) {
@@ -71,7 +81,7 @@ class HomeView: UIViewController {
             performSegue(withIdentifier: "picker", sender: nil)
         }
         else{
-            showAlert()
+            insufficientCancels()
         }
     }
     
@@ -113,10 +123,56 @@ class HomeView: UIViewController {
         
         UIApplication.shared.statusBarStyle = .lightContent
        
+        initializeAd()
+        if (RevMobAds.session() != nil){
+            self.loadRewardedVideo()
+            
         }
         
+        }
+    
+    //*****************************************
+    //*********Advertisement handlers**********
+    //*****************************************
+    func initializeAd(){
+        let completionBlock: () -> Void = {
+            self.loadRewardedVideo()
+            
+        }
+        let errorBlock: (Error?) -> Void = {error in
+            // check the error
+            print(error)
+        }
+        RevMobAds.startSession(withAppID: "586dfb7de3b2a21b72a4b569",
+                               withSuccessHandler: completionBlock, andFailHandler: errorBlock)
+    }
+    
+    //*****Rewarded Video*****
+    func loadRewardedVideo(){
+        rewardedVideo = RevMobAds.session().fullscreen()
+        rewardedVideo!.delegate = self
+        rewardedVideo!.loadRewardedVideo()
+    }
+    
+    
+    func showLoadedRewardedVideo(){
+        if(rewardedVideo != nil) {
+            rewardedVideo!.showRewardedVideo()
+        }
+    }
+    
+    func revmobRewardedVideoDidComplete(_ placementId: String!) {
+        if(placementId != nil){
+            NSLog("[RevMob Sample App] Rewarded Video of placement Id: \(placementId) completed")
+        }
+        DataService.instance.addOne()
+        emerLabel.text = DataService.instance.text()
+    }
+    
+
     
     //****Helper Functions
+    
     func timeSelected(){
         if DataService.instance.cancels>0{
             if InternetCheck.isConnection(){
@@ -127,7 +183,7 @@ class HomeView: UIViewController {
             }
         }
         else{
-            showAlert()
+            insufficientCancels()
         }
     }
     
@@ -142,8 +198,14 @@ class HomeView: UIViewController {
     }
     
     //****Manage Alerts****
-    func showAlert(){
+    func insufficientCancels(){
         let alert = UIAlertController(title: "Not enough Cancels", message: "You need at least 1 Cancel to start a timer", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func adNotLoaded(){
+        let alert = UIAlertController(title: "No Network Connection", message: "Take Phone out of airplane mode \n or try again in a few seconds", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
@@ -186,7 +248,13 @@ class HomeView: UIViewController {
     }
     
     
+    
 }
+
+
+
+
+
 
 
 

@@ -314,6 +314,7 @@ class TimerView: UIViewController {
                     DataService.instance.addMinutes(mins: (hr*60+min))
                 }
                 
+                
             }
         }
     }
