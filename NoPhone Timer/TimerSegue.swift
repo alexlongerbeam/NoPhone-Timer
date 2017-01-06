@@ -12,8 +12,8 @@ class TimerSegue: UIStoryboardSegue {
 
     
     override func perform() {
-        var home = source.view as UIView!
-        var timer = destination.view as UIView!
+        let home = source.view as UIView!
+        let timer = destination.view as UIView!
         
         timer?.transform = (timer?.transform)!.scaledBy(x: 0.001, y: 0.001)
         

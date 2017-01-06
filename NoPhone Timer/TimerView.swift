@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TimerView: UIViewController {
+class TimerView: UIViewController  {
 
     //Outlets related to Timer Display
     @IBOutlet weak var timerLabel: UILabel!
@@ -213,6 +213,7 @@ class TimerView: UIViewController {
         
         UIApplication.shared.statusBarStyle = .lightContent
         
+        
     }
     
     //Initialize timer components and start it
@@ -288,6 +289,8 @@ class TimerView: UIViewController {
         let delegate = UIApplication.shared.delegate as? AppDelegate
         delegate?.scheduleNotification(at: timeForNot!)
     }
+    
+
     
     //***************************************
     //********Miscellaneous functions********

@@ -129,6 +129,8 @@ class HomeView: UIViewController, RevMobAdsDelegate{
             
         }
         
+        
+        
         }
     
     //*****************************************
@@ -137,6 +139,7 @@ class HomeView: UIViewController, RevMobAdsDelegate{
     func initializeAd(){
         let completionBlock: () -> Void = {
             self.loadRewardedVideo()
+            
             
         }
         let errorBlock: (Error?) -> Void = {error in
@@ -169,7 +172,7 @@ class HomeView: UIViewController, RevMobAdsDelegate{
         emerLabel.text = DataService.instance.text()
     }
     
-
+    
     
     //****Helper Functions
     
@@ -243,6 +246,7 @@ class HomeView: UIViewController, RevMobAdsDelegate{
             if let timerVC = segue.destination as? TimerView {
                 timerVC.hr = hours
                 timerVC.min = minutes
+                
             }
         }
     }

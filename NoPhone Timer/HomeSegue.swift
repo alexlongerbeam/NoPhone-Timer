@@ -13,8 +13,8 @@ class HomeSegue: UIStoryboardSegue {
     
     
     override func perform() {
-        var timer = source.view as UIView!
-        var home = destination.view as UIView!
+        let timer = source.view as UIView!
+        let home = destination.view as UIView!
         
         home?.transform = (home?.transform)!.scaledBy(x: 10, y: 10)
         

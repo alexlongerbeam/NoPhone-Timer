@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let newComponents = DateComponents(calendar: calendar, timeZone: .current, month: components.month, day: components.day, hour: components.hour, minute: components.minute, second: components.second)
         let trigger = UNCalendarNotificationTrigger(dateMatching: newComponents, repeats: false)
         let content = UNMutableNotificationContent()
-        content.title = "NoPhone Timer"
-        content.body = "You weren't supposed to leave the app!"
+        content.title = "Return to App"
+        content.body = "You have a timer in progress!"
         content.sound = UNNotificationSound.default()
         let request = UNNotificationRequest(identifier: "textNotification", content: content, trigger: trigger)
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()

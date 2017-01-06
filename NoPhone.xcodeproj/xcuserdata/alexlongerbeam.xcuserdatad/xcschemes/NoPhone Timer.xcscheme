@@ -17,7 +17,7 @@
                BlueprintIdentifier = "FA54A77D1D5F838D0060FAE4"
                BuildableName = "NoPhone Timer.app"
                BlueprintName = "NoPhone Timer"
-               ReferencedContainer = "container:NoPhone Timer.xcodeproj">
+               ReferencedContainer = "container:NoPhone.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "FA54A77D1D5F838D0060FAE4"
             BuildableName = "NoPhone Timer.app"
             BlueprintName = "NoPhone Timer"
-            ReferencedContainer = "container:NoPhone Timer.xcodeproj">
+            ReferencedContainer = "container:NoPhone.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "FA54A77D1D5F838D0060FAE4"
             BuildableName = "NoPhone Timer.app"
             BlueprintName = "NoPhone Timer"
-            ReferencedContainer = "container:NoPhone Timer.xcodeproj">
+            ReferencedContainer = "container:NoPhone.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "FA54A77D1D5F838D0060FAE4"
             BuildableName = "NoPhone Timer.app"
             BlueprintName = "NoPhone Timer"
-            ReferencedContainer = "container:NoPhone Timer.xcodeproj">
+            ReferencedContainer = "container:NoPhone.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
