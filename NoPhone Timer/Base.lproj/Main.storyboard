@@ -424,7 +424,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="900" id="fZb-6Z-xQT"/>
                                                 </constraints>
-                                                <mutableString key="text">This app is designed to help yourself stay off your phone when you need to concentrate, get something done, or just spend some time away from a screen.
+                                                <string key="text">This app is designed to help yourself stay off your phone when you need to concentrate, get something done, or just spend some time away from a screen.
 
 - To begin, select an amount of time for the timer to be set, either by selecting one of the default time buttons, or choosing a custom amount of time. 
 
@@ -445,7 +445,7 @@ Cancels
 - A user will not be able to start a timer unless they have at least one Cancel
 
 - To acquire more Cancels, tap the “Get More Cancels” button on the home screen and watch an advertisement
-</mutableString>
+</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -587,8 +587,8 @@ Cancels
         <image name="square" width="600" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="s45-to-nXc"/>
         <segue reference="JEm-EO-Llr"/>
-        <segue reference="Jhv-bX-Uhg"/>
-        <segue reference="4zf-xh-67c"/>
+        <segue reference="Sq1-EV-rsF"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -14,9 +14,11 @@ class HomeView: UIViewController, RevMobAdsDelegate{
     @IBOutlet weak var emerLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     
+   
     @IBOutlet weak var emerButton: UIButton!
 
     //Components of help button
+    
     @IBOutlet weak var helpButton: UIButton!
     @IBOutlet weak var helpLabel: UILabel!
     @IBOutlet weak var helpImage: UIImageView!
@@ -88,6 +90,7 @@ class HomeView: UIViewController, RevMobAdsDelegate{
     @IBAction func helpButton(_ sender: Any) {
         performSegue(withIdentifier: "help", sender: nil)
     }
+    
     
     
     
